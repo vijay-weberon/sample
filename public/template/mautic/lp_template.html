@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- This is to add smart app banner for iOS Safari users to open the app in Chrome browser -->
+    <meta name="apple-itunes-app" content="app-id=535886823" />
+
+    <!-- This is the page title 
+		To change page title -> Change the text with in the title tag
+	-->
+    <title>LP Template</title>
+
+    <!-- Following og properties are used to create link preview when the link is 
+	shared in chat message or on Social networks such as Facebook, Twitter, LinkedIn etc
+	Update the content attribute's value for each of the following tags(og:title, og:description, og:image, og:url) 
+	for every page created using this template with corresponding values.
+	Make sure og:url content is set to the production url or leave it empty.
+	Remove these tags if they are not required
+	-->
+    <meta property="og:title" content="Landing Page Template" />
+    <meta
+      property="og:description"
+      content="This is a landing page template."
+    />
+    <meta
+      property="og:image"
+      content="https://poc.eastbayinfo.com/images/sw/banners/nbmain.jpg"
+    />
+    <meta property="og:url" content="" />
+
+    <!-- This is required to fetch the resources from CDN using relative urls in tracker.js and branded.js. Point it to the domain where resources are hosted.
+     Also replace all occurrences of 'https://poc.eastbayinfo.com' in this page with the production domain without fail.
+    -->
+    <script>
+      var baseURL = "https://poc.eastbayinfo.com";
+    </script>
+
+    <script src="https://poc.eastbayinfo.com/js/rb-config.js"></script>
+    <script src="https://poc.eastbayinfo.com/js/logger.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://poc.eastbayinfo.com/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://poc.eastbayinfo.com/css/fa.min.css" />
+    <style>
+      .bg-dark {
+        background-color: black !important;
+      }
+    </style>
+    <link href="https://poc.eastbayinfo.com/css/lp.css" rel="stylesheet" />
+    <script src="https://poc.eastbayinfo.com/js/jquery-3.5.1.min.js"></script>
+
+    <!-- This is to integrate chatbot into the page.
+       Remove these resources if chatbot is not required on the page. 
+     -->
+    <link rel="stylesheet" href="https://poc.eastbayinfo.com/css/chatbot.css" />
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/chatbot.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/index.js"
+      charset="utf-8"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/c3c47df7d6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- End of chatbot resources -->
+
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/jwt-decode.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://accounts.google.com/gsi/client"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/tracker-config.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/tracker-util.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/branded.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/tracker.js"
+      charset="utf-8"
+    ></script>
+    <style>
+      .onesignal-bell-container {
+        display: none !important;
+      }
+      .button {
+        display: inline-block;
+        width: 340px;
+        padding: 5px 0px;
+        text-align: center;
+        border-radius: 20px;
+        color: white !important;
+        font-weight: bold;
+      }
+      .icon {
+        padding-left: 10px;
+      }
+      .cta {
+        margin: 5px auto;
+        width: 340px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Push Notification Section -->
+    <!-- Push notification butter bar is created and placed with in butterBarContainer.
+    Push notification is enabled by default.
+    To disable Push notification, 
+    1. Remove the div tag with the id 'butterBarContainer'
+    3. Remove the script 'js/butter_bar2.js' at the bottom of the page
+    -->
+    <div
+      id="butterBarContainer"
+      style="position: fixed; width: 100%; z-index: 1; height: 25px"
+    ></div>
+
+    <!-- Navigation Section -->
+    <nav id="nav" class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarNav"
+      >
+        <div
+          id="headerMenu"
+          class="nav navbar-nav flex-wrap justify-content-center"
+        >
+          <!-- These are the menu items, href's value is the url of the page with the id of the section it points to with the prefix #, 
+		    Text(Home/Video/CTA/Content) between the opening and closing tags are the menus displayed on the UI 
+		    to add a new menu item, copy one of the anchor tag and change it's href value(make sure new section is created below with the same id) and text-->
+
+          <a class="nav-item nav-link" href="#banner">Home</a>
+          <a class="nav-item nav-link" href="#bgVideo">Video</a>
+          <a class="nav-item nav-link" href="#cta">CTA</a>
+          <a class="nav-item nav-link" href="#emVideo">Video1</a>
+          <a class="nav-item nav-link" href="#content">Content</a>
+        </div>
+      </div>
+    </nav>
+    <div id="paddingTop" class="paddingTop"></div>
+
+    <!-- The order of the sections given below can be changed by moving the section content one below the other
+	when the section order is changed/section is added/section is removed 
+	make sure the menu links in the Navigation section is also in the same order
+	-->
+
+    <!-- Banner Section -->
+    <div id="banner" style="background-color: #fafafa" class="banner">
+      <!-- This is used to overlay the text on the banner image. 
+		Remove this section if banner image and overlay text is not required.
+		-->
+      <div
+        style="
+          height: 270px;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          width: 100%;
+        "
+      >
+        <div style="width: auto; flex: 1 1 auto; text-align: center">
+          <h1 id="usp">
+            <div style="color: #ffffff">
+              Your Home Sold Guaranteed or I'll Buy It!
+            </div>
+          </h1>
+        </div>
+      </div>
+
+      <!-- 
+		This is the banner image, 
+		To Change banner image -> change 'srcset' attribute's value of source tags for different screen sizes and 'src' attribute's value of img tag as a fallback and set corresponding value for alt attribute.
+        If only one image is used for the banner then remove picture and source tags and use only 'img' tag.
+		-->
+      <picture>
+        <source
+          media="(min-width: 0px) and (max-width: 576px)"
+          srcset="
+            https://poc.eastbayinfo.com/images/sw/banners/new/tradeup_lpbanner.jpg
+          "
+        />
+        <source
+          media="(min-width: 577px) and (max-width: 768px)"
+          srcset="
+            https://poc.eastbayinfo.com/images/sw/banners/new/tradeup_lpbanner.jpg
+          "
+        />
+        <source
+          media="(min-width: 769px)"
+          srcset="
+            https://poc.eastbayinfo.com/images/sw/banners/new/tradeup_lpbanner.jpg
+          "
+        />
+        <img
+          id="custombanner"
+          width="100%"
+          src="https://poc.eastbayinfo.com/images/sw/banners/new/tradeup_lpbanner.jpg"
+          alt="27 Quick Easy Fix Ups to Sell Your Home image"
+        />
+      </picture>
+    </div>
+
+    <!-- Background Video Section -->
+    <!-- Do not change the id of the tags -->
+    <div
+      id="bgVideo"
+      class="bgVideo"
+      style="background-color: #fafafa; position: relative; display: none"
+    >
+      <div
+        id="vHeader"
+        style="
+          width: 100%;
+          height: 70px;
+          position: absolute;
+          background-color: black;
+          top: 0px;
+        "
+      ></div>
+      <iframe
+        id="video1"
+        frameborder="0"
+        style="width: 100%; height: 42vw; pointer-events: none"
+        allow="autoplay; fullscreen"
+        src=""
+      >
+      </iframe>
+      <div
+        id="vFooter"
+        style="
+          width: 100%;
+          height: 70px;
+          position: absolute;
+          background-color: black;
+          bottom: 20px;
+        "
+      ></div>
+      <div
+        style="
+          text-align: center;
+          cursor: pointer;
+          font-weight: bold;
+          text-decoration: underline;
+        "
+      >
+        <a id="playSound">Play Sound</a>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div
+      id="cta"
+      class="container"
+      style="padding-top: 50px; padding-bottom: 50px"
+    >
+      <div class="row" style="margin: auto; text-align: center">
+        <div class="col-12">
+          <h3>To order a FREE Special Report:</h3>
+        </div>
+      </div>
+      <div class="row" style="margin: auto; text-align: center">
+        <!-- 
+             To change phone number -> Change 'href' attribute's value of the <a> tag, change the text with in the <a> tag to reflect the same on the UI
+             To change the button color -> change background color value of the style attribute 
+             -->
+        <p class="cta">
+          <a class="button" style="background: #159794" href="tel:8443115109">
+            Call toll-free 844-311-5109 Ext 5023
+            <i class="fa fa-phone icon"></i>
+          </a>
+        </p>
+      </div>
+      <div class="row" style="margin: auto; text-align: center">
+        <div class="col-12">
+          <p
+            class="cta_or"
+            style="font-weight: bold; text-align: center; margin-bottom: 0px"
+          >
+            OR
+          </p>
+        </div>
+      </div>
+      <div class="row" style="margin: auto; text-align: center">
+        <!-- 
+             To change the report link -> Change 'href' attribute's value of the <a> tag, change the text with in the <a> tag to reflect the same on the UI
+             To change the button color -> change background color value of the style attribute  
+             -->
+        <p class="cta">
+          <a
+            id="ctaLink"
+            class="button"
+            style="background: #4962dd"
+            href="27tips_report"
+            target="_blank"
+          >
+            Get your free special report NOW
+            <i class="fa fa-file icon"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Embedded Video Section
+	Do not change the id of the tags 
+	If this section is used immediately after menu/banner then set padding-top in the style attribute as 0px -->
+    <div
+      id="emVideo"
+      class="container-fluid"
+      style="
+        display: none;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #fafafa;
+      "
+    >
+      <div class="row">
+        <div class="col-12" style="text-align: center"></div>
+      </div>
+      <div class="row">
+        <div class="col-12" style="text-align: center">
+          <iframe
+            id="video2"
+            style="width: 80%; height: 40vw"
+            allow="fullscreen"
+            src=""
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <!-- 
+    To change title - change text inside h1 tag,
+    To add new paragraph - add <p> </p> tag with the content inside it
+    -->
+    <div
+      id="content"
+      class="container-fluid"
+      style="padding-top: 50px; padding-bottom: 50px; background-color: #fafafa"
+    >
+      <div class="row justify-content-center">
+        <div class="col-12" style="text-align: center">
+          <h1>
+            27 Quick and Easy Fix Ups to Sell Your Home Fast and for Top Dollar
+          </h1>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <p>
+            Because your home may well be your largest asset, selling it is
+            probably one of the most important decisions you will make in your
+            life. And once you have made that decision, you'll want to sell your
+            home for the highest price in the shortest time possible without
+            compromising your sanity. Before you place your home on the market,
+            here's a way to help you to be as prepared as possible.
+          </p>
+          <p>
+            To assist homesellers, a new industry report has just been released
+            called "27 Valuable Tips That You Should Know to Get Your Home Sold
+            Fast and for Top Dollar." It tackles the important issues you need
+            to know to make your home competitive in today's tough, aggressive
+            marketplace.
+          </p>
+          <p>
+            Through these 27 tips you will discover how to protect and
+            capitalize on your most important investment, reduce stress, be in
+            control of your situation, and make the best profit possible.
+          </p>
+          <p>
+            In this report you'll discover how to avoid financial disappointment
+            or worse, a financial disaster when selling your home. Using a
+            common-sense approach, you will get the straight facts about what
+            can make or break the sale of your home.
+          </p>
+          <p>
+            You owe it to yourself to learn how these important tips will give
+            you the competitive edge to get your home sold fast and for the most
+            amount of money.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div
+      id="cta1"
+      class="container"
+      style="padding-top: 50px; padding-bottom: 50px"
+    >
+      <div class="row" style="margin: auto; text-align: center">
+        <div class="col-12">
+          <h3>Order your free report today. To order a FREE Special Report:</h3>
+        </div>
+      </div>
+      <div class="row" style="margin: auto; text-align: center">
+        <!-- 
+             To change phone number -> Change 'href' attribute's value of the <a> tag, change the text with in the <a> tag to reflect the same on the UI
+             To change the button color -> change background color value of the style attribute 
+             -->
+        <p class="cta">
+          <a class="button" style="background: #159794" href="tel:8443115109">
+            Call toll-free 844-311-5109 Ext 5023
+            <i class="fa fa-phone icon"></i>
+          </a>
+        </p>
+      </div>
+      <div class="row" style="margin: auto; text-align: center">
+        <div class="col-12">
+          <p
+            class="cta_or"
+            style="font-weight: bold; text-align: center; margin-bottom: 0px"
+          >
+            OR
+          </p>
+        </div>
+      </div>
+      <div class="row" style="margin: auto; text-align: center">
+        <!-- 
+             To change the report link -> Change 'href' attribute's value of the <a> tag, change the text with in the <a> tag to reflect the same on the UI
+             To change the button color -> change background color value of the style attribute  
+             -->
+        <p class="cta">
+          <a
+            id="ctaLink1"
+            class="button"
+            style="background: #4962dd"
+            href="27tips_report"
+            target="_blank"
+          >
+            Get your free special report NOW
+            <i class="fa fa-file icon"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Mautic Embedded Form -->
+    <!-- Remove this section if embedded form is not required 
+        Ensure correct formID is set in {form=formID} below.
+    -->
+    <div
+      id="mForm"
+      class="container"
+      style="padding-top: 50px; padding-bottom: 50px"
+    >
+      <div class="row" style="margin: auto; text-align: center">
+        <div id="aside" class="col-12">{form=28}</div>
+      </div>
+    </div>
+
+    <!-- Mautic Popup Form -->
+    <!-- Remove this section if popup form is not required 
+        Ensure correct formID is set in {form=formID} below after 'span' tag, with in the 'div' tag lpContent .
+    -->
+    <div id="lpModal" class="cmodal">
+      <div id="lpContent" class="cmodal-content">
+        <span id="lpClose" class="close">x</span>
+      </div>
+    </div>
+
+    <!-- Do not remove this script  -->
+    <script src="https://poc.eastbayinfo.com/js/bootstrap.min.js"></script>
+
+    <!-- CTA Url rewriting script
+    This is to rewrite the CTA link with the domain name 
+    Remove this script if CTA sections are not used -->
+    <script>
+      // Remove this if ctaLink is not used on the page
+      reWriteCTALink("ctaLink");
+
+      // Remove this if ctaLink1 is not used on the page
+      reWriteCTALink("ctaLink1");
+    </script>
+
+    <!-- Remove this script tag if youtube video is not used on the page -->
+    <script src="https://poc.eastbayinfo.com/js/ytvideo.js"></script>
+
+    <!-- Script required for the full screen background video 
+    Configure the video id in the script below by setting the 'videoID' variable
+    Remove this script if full screen youtube video with out controls is not required
+    -->
+    <script>
+      // Set the youtube video id here
+      let videoID = "wnF50WyyZsU";
+      loadYTBackgroundVideo(videoID);
+    </script>
+
+    <!-- Script required for the embedded video 
+    Configure the video id in the script below by setting the 'videoID' variable
+    Remove this script if full screen youtube video with out controls is not required
+    -->
+    <script>
+      // Set the youtube video id here
+      let embeddedVideoID = "wnF50WyyZsU";
+      loadYTEmbeddedVideo(embeddedVideoID);
+    </script>
+
+    <!-- This function invocation is to load the youtube iframe player api
+	Remove this script tag if youtube video is not used on the page 
+	-->
+    <script>
+      loadYTIframePlayerAPI();
+    </script>
+
+    <!-- This is Mautic tracking code, Do not remove it. -->
+    <script>
+      (function (w, d, t, u, n, a, m) {
+        w["MauticTrackingObject"] = n;
+        w[n] =
+          w[n] ||
+          function () {
+            (w[n].q = w[n].q || []).push(arguments);
+          };
+      })(window, document, "script", mauticSrc + "/mtc.js", "mt");
+    </script>
+
+    <!-- Mautic form configuration is done using the following methods. 
+	Remove the following script tag if mautic form is not used on the page -->
+    <script>
+      //This is to change the email form header
+      //setEmailFormHeader('formHeader')
+
+      //This is to change the phone form header
+      //setPhoneFormHeader('formHeader')
+
+      //Use this method if pop up form is required on the page. Remove the last argument(i.e true) or set it as false, if videos are not used on the page
+      //enablePopupForm(10000, 3, 5000, true);
+
+      // This is to load Mautic form
+      let page = "m_lp";
+      setMauticForms(); // set the mautic formset name for the webpage in formsets.json file
+      loadForm("aside"); // pass the id 'aside' for embedded form and 'lpContent' for popup form
+    </script>
+
+    <!-- This is to add push notification butter bar 
+	Remove this script if push notification is not required
+	-->
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/butter_bar2.js"
+    ></script>
+
+    <!-- This is required for chatbot integration.
+        Remove this if chatbot is not required on this page.
+      -->
+    <div id="chatContain"></div>
+  </body>
+</html>

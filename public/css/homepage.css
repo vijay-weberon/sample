@@ -1,0 +1,222 @@
+.main article {
+  width: 100%;
+}
+
+.main-container,
+.main.wrapper,
+.main article {
+  background: #efebe9;
+}
+
+.main article {
+  padding-top: 20px;
+}
+
+.customizedLinks {
+  width: 100%;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.customizedLinks a .titleText {
+  text-align: center;
+  width: 100%;
+  margin-top: 5%;
+  color: #ffffff;
+  float: right;
+}
+
+.customizedLinks a .imgBackground {
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center bottom !important;
+  background-size: 100% 70% !important;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#links_customized {
+  padding-top: 20px;
+}
+
+.pageLinks {
+  display: block;
+  background-image: url(/images/sw/banners/new/top_banner_home.jpg);
+  background-attachment: fixed !important;
+  padding-bottom: 20px !important;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.pageLinks > div {
+  background: transparent;
+}
+
+.pageLinksColumn {
+  width: 100%;
+}
+
+.clearfix::after {
+  content: " ";
+  display: block;
+  height: 0px;
+  clear: both;
+}
+
+.bg-opacity-white-80:before {
+  background: rgba(255, 255, 255, 0.8);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.pageLinks-text-heading {
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.pageLinks-subtitle {
+  margin-bottom: 0.6em;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: #000;
+}
+
+.pageLinks-wrapper {
+  padding: 16px 20px;
+  transition: background-color 120ms ease;
+}
+
+.pageLinks-anchor a {
+  padding: 16px;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoration 120ms ease;
+}
+
+.pageLinks-text-body {
+  margin-bottom: 0.6em;
+  font-size: 1em;
+  font-weight: 500;
+  color: #000;
+}
+
+.pageLinks-text-body:focus,
+.pageLinks-text-body:hover {
+  color: #7bad42;
+}
+
+a.pageLinks-wrapper-anchor {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.pageLinks-header,
+.pageLinks-anchor,
+.pageLinks-item {
+  position: relative;
+}
+
+@media (min-width: 0) {
+  .pageLinks-header,
+  .pageLinks-anchor {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .pageLinks-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    border-bottom: 1px solid #000;
+  }
+
+  .pageLinks-wrapper {
+    padding: 16px 20px;
+    transition: background-color 120ms ease;
+  }
+
+  .pageLinks-item {
+    display: none;
+  }
+
+  .customizedLinks a {
+    width: 96% !important;
+    border-radius: 4px;
+    height: 250px !important;
+    float: left;
+    margin: 2% 2% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .pageLinks-header,
+  .pageLinks-anchor {
+    font-size: 20px;
+  }
+
+  .pageLinks-item {
+    display: block;
+    font-size: 14px;
+  }
+
+  .customizedLinks a {
+    width: 48% !important;
+    border-radius: 4px;
+    height: 250px !important;
+    float: left;
+    margin: 1% 1% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .pageLinksColumn {
+    width: 50%;
+    float: left;
+  }
+
+  .pageLinks-header,
+  .pageLinks-anchor {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .customizedLinks a {
+    width: 23% !important;
+    border-radius: 4px;
+    height: 250px !important;
+    float: left;
+    margin: 1% 1% !important;
+  }
+}
+
+/* Branded homepage banner */
+
+#pPhoto {
+  width: 200px;
+}
+
+@media only screen and (min-width: 1200px) {
+  #pPhoto {
+    width: 16%;
+  }
+}

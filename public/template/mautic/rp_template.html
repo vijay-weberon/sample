@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- This is to add smart app banner for iOS Safari users to open the app in Chrome browser -->
+    <meta name="apple-itunes-app" content="app-id=535886823" />
+
+    <!-- This is the page title 
+    To change page title -> Change the text with in the title tag
+	-->
+    <title>Moving UP Report</title>
+
+    <!-- Following og properties are used to create link preview when the link is 
+	shared in chat message or on Social networks such as Facebook, Twitter, LinkedIn etc
+	Update the content attribute's value for each of the following tags(og:title, og:description, og:image, og:url) 
+	for every page created using this template with corresponding values.
+	Make sure og:url content is set to the production url or leave it empty.
+	Remove these tags if they are not required
+	-->
+    <meta property="og:title" content="Report Page Template" />
+    <meta property="og:description" content="This is a report page template." />
+    <meta
+      property="og:image"
+      content="https://poc.eastbayinfo.com/images/sw/banners/nbmain.jpg"
+    />
+    <meta property="og:url" content="" />
+
+    <!-- This is required to fetch the resources from CDN using relative urls in tracker.js and branded.js. Point it to the domain where resources are hosted.
+    Also replace all occurrences of 'https://poc.eastbayinfo.com' in this page with the production domain without fail.
+    -->
+    <script>
+      var baseURL = "https://poc.eastbayinfo.com";
+    </script>
+
+    <script src="https://poc.eastbayinfo.com/js/rb-config.js"></script>
+    <script src="https://poc.eastbayinfo.com/js/logger.js"></script>
+    <link
+      href="https://poc.eastbayinfo.com/css/sw/styles3bb8.css?v=AUcpKiC1BEGp1mp0rFd8QrbpJS68UXwJcjvhlicFcHQ1"
+      rel="stylesheet"
+      onerror="logResourceLoadError(this)"
+    />
+    <script
+      src="https://poc.eastbayinfo.com/js/sw/scriptsccc7.js?v=8Qo-Y9iZgflFcQfN0hPD7RyA9Kq9zxGJJibCwFl-tB41"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://poc.eastbayinfo.com/css/sw/t1.css"
+      type="text/css"
+      onerror="logResourceLoadError(this)"
+    />
+    <link
+      href="https://poc.eastbayinfo.com/css/customStyle.css"
+      rel="stylesheet"
+      onerror="logResourceLoadError(this)"
+    />
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/html-imports.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <link
+      rel="import"
+      id="menuTemplate"
+      href="https://poc.eastbayinfo.com/menu_template"
+      onerror="logResourceLoadError(this)"
+    />
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/pageutil.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/jwt-decode.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://accounts.google.com/gsi/client"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/tracker-config.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/tracker-util.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/branded.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://poc.eastbayinfo.com/js/tracker.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
+      rel="stylesheet"
+      type="text/css"
+      onerror="logResourceLoadError(this)"
+    />
+    <link
+      rel="stylesheet"
+      href="https://poc.eastbayinfo.com/css/newui.css"
+      onerror="logResourceLoadError(this)"
+    />
+    <style>
+      .main article {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="page-wrapper" style="position: relative">
+      <!-- This is add Push notification butterbar to the page,
+        Remove the div tag with the id 'butterBarContainer' if butterbar is not required  
+        -->
+      <div id="butterBarContainer"></div>
+
+      <div id="content" class="bgclr0">
+        <div class="header-container" role="banner">
+          <header class="wrapper clearfix bgclr8">
+            <!-- This is used to overlay the text on the banner image. 
+		            Remove this section if banner image and overlay text is not required.
+		            -->
+            <div
+              style="
+                height: 270px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                width: 100%;
+              "
+            >
+              <div style="width: 150px; flex: 0 0 auto"></div>
+              <div style="width: auto; flex: 1 1 auto; text-align: center">
+                <h1 id="usp">
+                  <div style="color: #ffffff">
+                    Your Home Sold Guaranteed or I'll Buy It!
+                  </div>
+                </h1>
+              </div>
+            </div>
+
+            <!-- This is to add the banner image,
+					To change banner image update 'src' and 'alt' attributes of the img tag appropriately
+					-->
+            <img
+              src="https://poc.eastbayinfo.com/images/sw/banners/new/tradeup_lpbanner.jpg"
+              width="100%"
+              alt="6 Mistakes to Avoid When Moving to a Larger Home Image"
+              onerror="logResourceLoadError(this)"
+            />
+          </header>
+        </div>
+
+        <div class="main-container">
+          <div class="main wrapper clearfix bgclr6">
+            <div id="greeting" style="float: right">
+              <!-- This is the default welcome message displayed to the user. 
+                        User name is appended to the message on email verfication
+                        -->
+              <div
+                id="dwc_alias"
+                data-slot="dwc"
+                data-param-slot-name="rpt_alias"
+              >
+                Welcome
+              </div>
+            </div>
+
+            <!-- This is the content area of the page -->
+            <article id="articlecntm" class="articlecnt">
+              <!-- Add/Remove/Update the tag below to change the content of the page -->
+              <hr width="75%" noshade="noshade" />
+
+              <section align="center">
+                <b
+                  ><i>
+                    ". . . you have to sell your present home at exactly the
+                    right time in order to avoid either the financial burden of
+                    owning two homes or, just as bad, the dilemma of having no
+                    place to live during the gap between closings"
+                  </i></b
+                >
+              </section>
+
+              <hr width="75%" noshade="noshade" />
+
+              <section>
+                <b>
+                  Unlike the experience of buying a first home, when you're
+                  looking to move-up, and already own a home, there are certain
+                  factors that can complicate the situation. It's very important
+                  for you to consider these issues before you list your home for
+                  sale.
+                </b>
+              </section>
+
+              <section>
+                <b>
+                  Not only is there the issue of financing to consider, but you
+                  also have to sell your present home at exactly the right time
+                  in order to avoid either the financial burden of owning two
+                  homes or, just as bad, the dilemma of having no place to live
+                  during the gap between closings.
+                </b>
+              </section>
+
+              <section>
+                <h2>Six Strategies</h2>
+              </section>
+
+              <section>
+                In this report, we outline the six most common mistakes
+                homeowners make when moving to a larger home. Knowledge of these
+                six mistakes, and the strategies to overcome them, will help you
+                make informed choices before you put your existing home on the
+                market.
+              </section>
+
+              <section>
+                <h3>1. Rose-colored glasses</h3>
+              </section>
+
+              <section>
+                Most of us dream of improving our lifestyle and moving to a
+                larger home. The problem is that there's sometimes a discrepancy
+                between our hearts and our bank accounts. You drive by a home
+                that you fall in love with only to find that it's already sold
+                or that it's more than what you are willing to pay. Most
+                homeowners get caught in this hit or miss strategy of house
+                hunting when there's a much easier way of going about the
+                process. For example, find out if your agent offers a
+                Buyer Profile System or House-hunting Service, which takes the
+                guesswork away and helps to put you in the home of your dreams.
+                This type of program will cross-match your criteria with ALL
+                available homes on the market and supply you with printed
+                information on an ongoing basis. A program like this helps
+                homeowners take off their rose-colored glasses and, affordably,
+                move into the home of their dreams.
+              </section>
+
+              <section>
+                <h3>2. Failing to make necessary improvements</h3>
+              </section>
+
+              <section>
+                If you want to get the best price for the home you're selling,
+                there will certainly be things you can do to enhance it in a
+                prospective buyer's eyes. These fix-ups don't necessarily have
+                to be expensive. But even if you do have to make a minor
+                investment, it will often come back to you tenfold in the price
+                you are able to get when you sell. It's very important that
+                these improvements be made before you put your home on the
+                market. If cash is tight, investigate an equity loan that you
+                can repay on closing.
+
+                <!-- This is to indicate to the user that the rest of the content is hidden.  
+                             Place this at the end of the content which is shown by default to all the users.
+                             -->
+                <span id="dots">.....</span>
+              </section>
+
+              <!-- 
+                        This is required for the user to get access to the rest of the content which is hidden by clicking on 'Read More'.
+                        This should be placed immediately after the part of the content which is shown by default to all the users.
+                        -->
+              <section id="note" style="color: red">
+                <button onclick="readMore('lpContent')" id="readMore">
+                  Read More
+                </button>
+              </section>
+
+              <!-- Hidden content of the report should be placed inside this div tag. 
+                   	    This content is visible to the user only on submission of the email.
+                   	    -->
+              <div id="report" style="display: none">
+                <section>
+                  <h3>3. Not selling first</h3>
+                </section>
+
+                <section>
+                  You should plan to sell before you buy. This way you will not
+                  find yourself at a disadvantage at the negotiating table,
+                  feeling pressured to accept an offer that is below-market
+                  value because you have to meet a purchase deadline. If you've
+                  already sold your home, you can buy your next one with no
+                  strings attached. If you do get a tempting offer on your home
+                  but haven't made significant headway on finding your next
+                  home, you might want to put in a contingency clause in the
+                  sale contract which gives you a reasonable time to find a home
+                  to buy. If the market is slow and you find your home is not
+                  selling as quickly as you anticipated, another option could be
+                  renting your home and putting it up on the market later -
+                  particularly if you are selling a smaller, starter home.
+                  You'll have to investigate the tax rules if you choose this
+                  latter option. Better still, find a way to eliminate this
+                  situation altogether by getting your agent to guarantee the
+                  sale of your present home (see point number 5 below).
+                </section>
+
+                <section>
+                  <h3>4. Failing to get a pre-approved mortgage</h3>
+                </section>
+
+                <section>
+                  Pre-approval is a very simple process that many homeowners
+                  fail to take advantage of. While it doesn't cost or obligate
+                  you to anything, pre-approval gives you a significant
+                  advantage when you put an offer on the home you want to
+                  purchase because you know exactly how much house you can
+                  afford, and you already have the green light from your lending
+                  institution. With a pre-approved mortgage, your offer will be
+                  viewed far more favorably by a seller - sometimes even if it's
+                  a little lower than another offer that's contingent on
+                  financing. Don't fail to take this important step.
+                </section>
+
+                <section>
+                  <h3>5. Getting caught in the Real Estate Catch 22</h3>
+                </section>
+
+                <section>
+                  Your biggest dilemma when buying and selling is deciding which
+                  to do first. Point number 3 above advises you to sell first.
+                  However there are ways to eliminate this dilemma altogether.
+                  Some agents offer a Guaranteed Sale Trade-Up Program that
+                  actually takes the problem away from you entirely by
+                  guaranteeing the sale of your present home before you take
+                  possession of your next one. If you find a home you wish to
+                  purchase and have not sold your current home yet, they will
+                  buy your home from you themselves so you can make your move
+                  free of stress and worry.
+                </section>
+
+                <section>
+                  <h3>6. Failing to coordinate closings</h3>
+                </section>
+
+                <section>
+                  With two major transactions to coordinate together with all
+                  the people involved such as mortgage experts, appraisers,
+                  lawyers, loan officers, title company representatives, home
+                  inspectors or pest inspectors the chances of mix-ups and
+                  miscommunication go up dramatically. To avoid a logistical
+                  nightmare ensure you work closely with your agent.
+                </section>
+              </div>
+            </article>
+
+            <aside class="bgclr3" id="aside" style="padding-top: 0px"></aside>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is the footer section of the page  -->
+      <div class="footer-container">
+        <footer class="wrapper">
+          <div id="contactinfo">
+            <div id="disclosure">
+              <center>
+                Praveen Kumar, CA BRE Lic#: 01928307<br />
+                12935 Alcosta Blvd. #3681, San Ramon, California, 94583<br />
+                praveen@weberealty.com<br />
+                925-452-7483
+              </center>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- This is required to load the Mautic form as popup form.
+        Ensure correct formID is set in {form=formID} below.
+    -->
+    <div id="lpModal" class="cmodal">
+      <div id="lpContent" class="cmodal-content">
+        <span id="lpClose" class="close">×</span>
+        {form=28}
+      </div>
+    </div>
+
+    <script>
+      // Mautic tracking
+      (function (w, d, t, u, n, a, m) {
+        w["MauticTrackingObject"] = n;
+        w[n] =
+          w[n] ||
+          function () {
+            (w[n].q = w[n].q || []).push(arguments);
+          };
+      })(window, document, "script", mauticSrc + "/mtc.js", "mt");
+
+      // This is to set the email form header
+      setEmailFormHeader("Please complete to access FREE Full Report now!");
+
+      // This is to configure popup form
+      enablePopupForm(3000, 3, 5000);
+
+      // This is to load Mautic form
+      let page = "m_asset";
+      setMauticForms();
+      loadForm("lpContent", true);
+    </script>
+  </body>
+</html>

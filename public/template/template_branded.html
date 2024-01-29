@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- This is to add smart app banner for iOS Safari users to open the app in Chrome browser -->
+    <meta name="apple-itunes-app" content="app-id=535886823" />
+
+    <!-- This is the page title 
+    To change page title -> Change the text with in the title tag
+	-->
+    <title>Get Hot Listings</title>
+
+    <!-- Following og properties are used to create link preview when the link is 
+	shared in chat message or on Social networks such as Facebook, Twitter, LinkedIn etc
+	Update the content attribute's value for each of the following tags(og:title, og:description, og:image, og:url) 
+	for every page created using this template with corresponding values.
+	Make sure og:url content is set to the production url or leave it empty.
+	Remove these tags if they are not required
+	-->
+    <meta property="og:title" content="Landing Page Template" />
+    <meta
+      property="og:description"
+      content="This is a landing page template."
+    />
+    <meta
+      property="og:image"
+      content="https://poc.eastbayinfo.com/images/sw/banners/nbmain.jpg"
+    />
+    <meta property="og:url" content="" />
+
+    <script src="js/rb-config.js"></script>
+    <script src="js/logger.js"></script>
+    <link
+      href="css/sw/styles3bb8.css?v=AUcpKiC1BEGp1mp0rFd8QrbpJS68UXwJcjvhlicFcHQ1"
+      rel="stylesheet"
+      onerror="logResourceLoadError(this)"
+    />
+    <script
+      src="js/sw/scriptsccc7.js?v=8Qo-Y9iZgflFcQfN0hPD7RyA9Kq9zxGJJibCwFl-tB41"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="css/sw/t1.css"
+      type="text/css"
+      onerror="logResourceLoadError(this)"
+    />
+    <link
+      href="css/customStyle.css"
+      rel="stylesheet"
+      onerror="logResourceLoadError(this)"
+    />
+    <script
+      type="text/javascript"
+      src="js/html-imports.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <link
+      rel="import"
+      id="menuTemplate"
+      href="menu_template"
+      onerror="logResourceLoadError(this)"
+    />
+    <script
+      type="text/javascript"
+      src="js/pageutil.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+
+    <!--  This is add Chatbot to the page, 
+    Remove the following 4 resources if Chatbot is not required
+    -->
+    <link
+      rel="stylesheet"
+      href="css/chatbot.css"
+      onerror="logResourceLoadError(this)"
+    />
+    <script
+      type="text/javascript"
+      src="js/chatbot.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/index.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/c3c47df7d6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="js/jwt-decode.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://accounts.google.com/gsi/client"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/tracker-config.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/tracker-util.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/branded.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <script
+      type="text/javascript"
+      src="js/tracker.js"
+      charset="utf-8"
+      onerror="logResourceLoadError(this)"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"
+      rel="stylesheet"
+      type="text/css"
+      onerror="logResourceLoadError(this)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/newui.css"
+      onerror="logResourceLoadError(this)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+      onerror="logResourceLoadError(this)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/fa.min.css"
+      onerror="logResourceLoadError(this)"
+    />
+  </head>
+
+  <body>
+    <div id="page-wrapper" style="position: relative">
+      <div id="content" class="bgclr0">
+        <div class="header-container" role="banner">
+          <!-- This is add Push notification butterbar to the page,
+                  Remove the div tag with the id 'butterBarContainer' if butterbar is not required  
+                -->
+          <div id="butterBarContainer"></div>
+
+          <header class="wrapper clearfix bgclr8">
+            <!-- This is used to overlay the text on the banner image. 
+		            Remove this section if text overlay on the banner is not required.
+		            -->
+            <div
+              style="
+                height: 270px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                width: 100%;
+              "
+            >
+              <div style="width: 150px; flex: 0 0 auto"></div>
+              <div style="width: auto; flex: 1 1 auto; text-align: center">
+                <h1 id="usp">
+                  <div style="color: #ffffff">
+                    Your Home Sold Guaranteed or I'll Buy It!*
+                  </div>
+                </h1>
+              </div>
+            </div>
+
+            <!-- This is to add the banner image,
+					To change banner image update 'src' and 'alt' attributes of the img tag appropriately.
+					If it is not a generic branded page and the banner is not loaded based on UTM Campaign then update the 'src' attribute of the img tag.
+					-->
+            <picture id="pBanner">
+              <img
+                id="banner"
+                src="images/sw/banners/new/default_banner.jpg"
+                width="100%"
+                alt="You can become a VIP Buyer and Beat Other Buyers to Hot New Listings Image"
+                onerror="logResourceLoadError(this)"
+              />
+            </picture>
+          </header>
+        </div>
+
+        <div class="main-container">
+          <div class="main wrapper clearfix bgclr6">
+            <!-- This is the left section of the content area of the page -->
+            <article class="bgclr8" role="article">
+              <div id="articlecntm" class="articlecnt">
+                <!-- Add/Remove/Update the tag below to change the content of the page -->
+                <h1>
+                  <font color="#ff0000"
+                    >Beat out other buyers to Hot New Listings</font
+                  >
+                </h1>
+
+                <h2>
+                  Receive Priority Access To ALL New Listings That Match Your
+                  Home Buying Criteria
+                </h2>
+
+                <h3>
+                  <font color="#0000ff">Here's how it works...</font>
+                </h3>
+
+                <p>
+                  Our Exclusive Buyer Profile System saves you Time and Money.
+                  Simply tell us what you're looking for and get priority access
+                  to ALL homes that match your criteria, including Bank
+                  Foreclosures, Company Owned Properties and other Distress
+                  Sales.
+                </p>
+
+                <p>
+                  No more wasted time looking at out-dated information in
+                  newspapers or searching the internet. Priority access means
+                  you're there first before other buyers, so you can negotiate
+                  the lowest possible price and your time is not wasted viewing
+                  homes that don't interest you.
+                </p>
+
+                <h3>
+                  <font color="#0000ff">It's easy to get started...</font>
+                </h3>
+
+                <p>
+                  Fill out the form and click the SUBMIT button to get started.
+                </p>
+
+                <br />
+              </div>
+            </article>
+
+            <!-- This is the right section of the content area of the page where Mautic form is loaded  -->
+            <aside class="bgclr3" id="aside">
+              <!-- If CTA section is not required, remove the p tag with the id 'cta' -->
+              <p id="cta" class="cta">
+                <a class="cta_button" href="tel:8442659508,,,5004">
+                  Call 844-265-9508 Ext 5004
+                  <i class="fa fa-phone cta_icon"></i>
+                </a>
+                <span class="cta_span"
+                  >_ _ _ _ _ _ _ _ _ _ _ _ OR _ _ _ _ _ _ _ _ _ _ _ _</span
+                >
+              </p>
+            </aside>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is the footer section of the page  -->
+      <div class="footer-container">
+        <footer class="wrapper">
+          <div id="contactinfo">
+            <div id="disclosure">
+              <center>
+                Praveen Kumar, CA BRE Lic#: 01928307<br />
+                12935 Alcosta Blvd. #3681, San Ramon, California, 94583<br />
+                praveen@weberealty.com<br />
+                925-452-7483
+              </center>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- This is required for Chatbot integration. 
+    Remove the tag with the id 'chatContain' if Chatbot is not required on the page
+    -->
+    <div id="chatContain"></div>
+
+    <script>
+      // This is to load the header and footer menu
+      loadHeaderAndFooterMenu(
+        "#menuTemplate",
+        "content",
+        "#headerMenu",
+        "#btm_menu",
+      );
+
+      //This is required to update the Banner image on generic branded page. Remove this if it is not a generic branded page
+      updateBanner();
+
+      // Mautic tracking
+      (function (w, d, t, u, n, a, m) {
+        w["MauticTrackingObject"] = n;
+        (w[n] =
+          w[n] ||
+          function () {
+            (w[n].q = w[n].q || []).push(arguments);
+          }),
+          (a = d.createElement(t)),
+          (m = d.getElementsByTagName(t)[0]);
+        a.async = 1;
+        a.src = u;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, "script", mauticSrc + "/mtc.js", "mt");
+
+      //setEmailFormHeader("email form header");
+      //setPhoneFormHeader("phone form header");
+
+      //This is set the custom form header which is displayed after phone submission(used in Homeward bound form)
+      //window.customFormHeader = "Thanks in advance for your Referral!";
+
+      //This is to disable GoogleOneTap on the page
+      //disableGoogleOneTap();
+
+      //This is to disable ShareThis on the page
+      //disableShareThis();
+
+      // This is to load Mautic form
+      let page = "lp";
+      setMauticForms();
+      loadForm("aside");
+    </script>
+
+    <!-- This is to integrate Push notification to the page.
+    Remove this script tag if push notification is not required
+    -->
+    <script
+      type="text/javascript"
+      src="js/butter_bar2.js"
+      onerror="logResourceLoadError(this)"
+    ></script>
+  </body>
+</html>
