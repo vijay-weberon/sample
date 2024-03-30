@@ -52,10 +52,12 @@ setAreaCodeRegEx();
 function addMauticFormHooksOnSubmitAndOnResponse(fName) {
   MauticFormCallback[fName] = {
     onValidateEnd: function (formValid) {
+      console.log("onVlaidateEnd")
       onFormSubmitEvent();
     },
     onResponseEnd: function (response) {
       setTimeout(function () {
+        console.log("reload function executed")
         location.reload();
       }, 2000);
     },
@@ -383,6 +385,7 @@ function hideLastForm() {
 }
 
 function onFormSubmitEvent() {
+  console.log("onFormSubmitEvent executed")
   let lpTag = currentPageName;
   let pageID = getPageID();
   // store the update in session storage, which will be sent after form submission
