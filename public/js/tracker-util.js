@@ -53,7 +53,7 @@ const MAUTIC_SRC_CONFIG = {
     "https://leads-blue-weberealty.thrivebrokers.com",
   "template-thrivebrokers.pages.dev":
     "https://leads-blue-weberealty.thrivebrokers.com",
-    "sample-ten-ochre.vercel.app":
+    "sample-thrivebrokers-d6b.pages.dev":
     "https://leads-blue-weberealty.thrivebrokers.com",
 };
 
